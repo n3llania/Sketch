@@ -2,20 +2,11 @@
 function setup() {
   createCanvas(500, 500);
   frameRate(30)
+  angleMode(DEGREES)
 //   background(0)
 }
 
 function draw() {
-    // noFill()
-    // if (mouseIsPressed) {
-    //     noFill()
-    //     stroke(random(myColors))
-    //     strokeWeight(random(10, 30, 60))
-    // } else {
-    //     noStroke()
-    //     fill(random(myColors))
-    // }
-    // circle(mouseX, mouseY, random(10, 100))
     let radius = 50;
 
     let leftX = width / 2 - 30;
@@ -34,10 +25,11 @@ function draw() {
     if (mouseIsPressed) {
         background(255)
 
-        fill(0)
+        fill("red")
+        noStroke ()
         text('STOP', 250, 170)
-         textSize(80)
-        textWeight(400)
+        textSize(80)
+        textWeight(800)
         textAlign(CENTER)
 
         noFill();
@@ -46,25 +38,34 @@ function draw() {
         ellipse(ileftX, height / 2, iradius, iradius);
         ellipse(irightX, height / 2, iradius, iradius);
 
-        fill(0);
+        fill("red");
+        stroke("red")
         ellipse(ileftX + ix, height / 2 + iy, 20, 20);
         ellipse(irightX + ix, height / 2 + iy, 20, 20);
     } else {
-        background(0)
+        background("black")
 
         fill(255)
+        noStroke()
+        textSize(16)
         text('Press Me!', 250, 170)
+        textWeight(400)
         textAlign(CENTER)
 
-        noFill()
+        noFill("white")
         stroke("white")
         strokeWeight(20)
-        rect (200, 210, 100, 140,)
+        rect (200, 210, 100, 160, 13)
 
         noStroke()
         fill('white')
         circle(width/2, height/2, 100)
-    
+
+        noStroke()
+        fill('black')
+        strokeWeight(5)
+        arc(width/2, 280, 20, 20, 0, 180)
+
         noFill();
         stroke(0);
         strokeWeight(10)
