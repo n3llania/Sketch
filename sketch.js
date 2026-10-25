@@ -52,28 +52,45 @@ function draw() {
         textWeight(400)
         textAlign(CENTER)
 
-        noFill("white")
-        stroke("white")
+        fill("#b1cc74")
+        stroke("#b1cc74")
         strokeWeight(20)
         rect (200, 210, 100, 160, 13)
 
         noStroke()
-        fill('white')
+        fill("#eee5e9")
         circle(width/2, height/2, 100)
 
         noStroke()
-        fill('black')
+        fill('#d90368')
         strokeWeight(5)
         arc(width/2, 280, 20, 20, 0, 180)
 
         noFill();
-        stroke(0);
+        stroke('#1e2749');
         strokeWeight(10)
         ellipse(leftX, height / 2, radius, radius);
         ellipse(rightX, height / 2, radius, radius);
 
-        fill(0);
+        stroke('#6a65ff')
+        fill('#6a65ff');
         ellipse(leftX + x, height / 2 + y, 20, 20);
         ellipse(rightX + x, height / 2 + y, 20, 20);
+
+        push()
+        translate(210, -85)
+        noStroke()
+        fill('#b1cc74')
+        rotate(35)
+        ellipse(220, 200, 80, 40)
+        pop()
+        
+        push()
+        translate(-69, 170)
+        noStroke()
+        fill('#b1cc74')
+        rotate(-35)
+        ellipse(220, 200, 90, 40)
+        pop()
         }
     }

@@ -24,13 +24,13 @@ function draw(){
         if ((i+j) % 2 === 0) {
             noStroke()
             strokeWeight(2)
-            stroke("blue")
-            fill (r, 100, b)
+            stroke("orange")
+            fill (b, y, r)
 
         } else {
             noFill()
             strokeWeight(2)
-            stroke("blue")
+            stroke("red")
         }
         
  // if (random() > 0.5) {
@@ -50,21 +50,23 @@ function draw(){
         // }       
 
         let d = dist(x, y, mouseX, mouseY)
-        let circleSize = map(d, 0, 500, s, s * 0.01)
+        let circleSize = map(d, 0, 300, s*2, s * .01)
         // let r = map(x, 0, width, 100, 250)
         // let b = map(y, 0, height, 250, 250)
         // stroke("orange")
             push()
             translate(x, y)
             rotate(frameCount / 10.0)
-            fill("blue")
+            fill("red")
+            square (0, 0, circleSize)
             square (0, 0, circleSize)
             pop()
 
             circle (x, y, circleSize)
             rectMode(CENTER)
             noFill()
-            rect (x, y, s*3)
+            circle (x, y, s*.5)
+            rect (x, y, s*5)
         // fill (r, 100, b)
         // rectMode(CENTER)
        
