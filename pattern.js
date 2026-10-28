@@ -57,7 +57,7 @@ function draw(){
             push()
             translate(x, y)
             rotate(frameCount / 10.0)
-            fill("red")
+            fill("black")
             square (0, 0, circleSize)
             square (0, 0, circleSize)
             pop()
