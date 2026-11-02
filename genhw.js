@@ -1,5 +1,5 @@
 let cols, rows
-let s = 30
+let s = 60
 
 let squareSizeSlider
 let frameRateSlider
@@ -9,17 +9,24 @@ let square2StrokeWeight
 let square2ShapeSlider
 
 function setup(){
-    createCanvas(windowWidth, windowHeight)
+    createCanvas(800, 800)
     cols = int(width/s)
     rows = int(height/s)
 
-    squareSizeSlider = createSlider(10, 50, 20);
-    frameRateSlider = createSlider(10, 50);
-    squareRotateSlider = createSlider(0, 360, 90, 0);
+    squareSizeSlider = createSlider(10, 90, 20);
+    // squareRotateSlider = createSlider(0, 360, 90, 0);
+    squareShapeSlider = createSlider(1, 50, 1)
+    squareStrokeSlider = createSlider(1, 5, 2)
+    squareColorPicker = createColorPicker('orange')
+
+
     createP ('Shape 2')
-    square2SizeSlider = createSlider(10, 50, 20);
+    square2SizeSlider = createSlider(10, 90, 20);
     square2StrokeWeight = createSlider(1, 5, 2)
-    square2ShapeSlider = createSlider(1, 30, 1)
+    square2ShapeSlider = createSlider(1, 50, 1)
+    frameRateSlider = createSlider(10, 50);
+    square2ColorPicker = createColorPicker('blue')
+
 
 
     // frameRate(frameRateSlider);
@@ -40,25 +47,29 @@ function draw(){
             let s2 = square2SizeSlider.value()
             let s2w = square2StrokeWeight.value()
             let br = square2ShapeSlider.value()
+            let br1 = squareShapeSlider.value()
+            let sw = squareStrokeSlider.value()
 
             for (let i = 0; i < 5; i++){
                 push()
                 translate(x, y) //distance from Center
                 rotate(frameCount/10)
                 noFill()
-                stroke('blue')
+                stroke(square2ColorPicker.value())
                 strokeWeight(s2w)
                 rectMode(CENTER)
                 square(0, 0, s2, br)
                 pop()
+                
             }
 
         push()
         rectMode(CENTER)
-        translate(0,0)
+        translate(0, 0)
         noFill()
-        stroke('orange')
-        square(x, y, squareSizeSlider.value()) 
+        stroke(squareColorPicker.value())
+        strokeWeight(sw)
+        square(x, y, squareSizeSlider.value(), br1) 
         // rotate(radians(squareRotateSlider.value()))
         pop()
 
