@@ -1,0 +1,65 @@
+[
+  {
+    "day": "monday",
+    "destination": "school",
+    "mood": "tired",
+    "traffic": "bad",
+    "temp": "cold",
+    "window": "up",
+    "music": "none"
+  },
+  {
+    "day": "monday",
+    "destination": "else",
+    "mood": "neutral",
+    "traffic": "neutral",
+    "temp": "good",
+    "window": "up",
+    "music": "background"
+  },
+  {
+    "day": "monday",
+    "destination": "home",
+    "mood": "neutral",
+    "traffic": "neutral",
+    "temp": "good",
+    "window": "up",
+    "music": "singing"
+  },
+  {
+    "day": "tuesday",
+    "destination": "school",
+    "mood": "tired",
+    "traffic": "bad",
+    "temp": "good",
+    "window": "up",
+    "music": "background"
+  },
+  {
+    "day": "tuesday",
+    "destination": "else",
+    "mood": "frustrated",
+    "traffic": "bad",
+    "temp": "good",
+    "window": "up",
+    "music": "loud"
+  },
+  {
+    "day": "tuesday",
+    "destination": "home",
+    "mood": "fun",
+    "traffic": "good",
+    "temp": "good",
+    "window": "down",
+    "music": "loud"
+  },
+  {
+    "day": "wednesday",
+    "destination": "school",
+    "mood": "tired",
+    "traffic": "bad",
+    "temp": "cold",
+    "window": "up",
+    "music": "background"
+  }
+]
