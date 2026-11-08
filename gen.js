@@ -112,7 +112,7 @@ function drawLines2() {
         rotate(i/num * TWO_PI)
         translate(lines2DistSlider.value(), 0) // distance from the center
         rotate(-radians(lines2SpinSlider.value())) // slider input    
-        line(-2,0,2,0) 
+        line(-len/2,0,len/2,0) 
         pop()
     }
 }
